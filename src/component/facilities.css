@@ -1,0 +1,24 @@
+.header-bg {
+    background-image: url('https://danangfantasticity.com/wp-content/uploads/2021/02/Furama-resort-danang-103-105-vo-nguyen-giap-da-nang-fly-cam.jpg'); /* Thay thế bằng URL ảnh của bạn */
+    background-size: cover; /* Đảm bảo ảnh phủ đầy khu vực */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Ngừng lặp ảnh */
+  }
+.facility-bg{
+background-image: url('https://dcmstudios.com.vn/wp-content/uploads/2021/07/IMG_2081-2.jpg');
+background-size: cover; /* Đảm bảo ảnh phủ đầy khu vực */
+background-position: center; /* Căn giữa ảnh */
+background-repeat: no-repeat; /* Ngừng lặp ảnh */
+}
+.addfacilities-bg{
+  color: #fff;             /* Chữ sáng */
+  padding: 40px;           /* Thêm khoảng cách để nội dung không bị sát viền */
+  text-align: left;      /* Căn giữa văn bản */
+  border-radius: 10px;     /* Viền bo tròn nếu cần */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Để tạo hiệu ứng bóng cho nền */
+  font-size: 1.5rem;       /* Cỡ chữ lớn để nổi bật */
+}
+.addfacilities-bg h1,
+.addfacilities-bg p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Tạo hiệu ứng bóng cho chữ */
+}

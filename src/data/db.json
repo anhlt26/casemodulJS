@@ -1,0 +1,288 @@
+{
+  "facilities": [
+    {
+      "type": "House",
+      "area": 100,
+      "rental_cost": 1000,
+      "max_people": 20,
+      "room_standard": "KING",
+      "img_url": "https://i0.wp.com/integrum.co.ke/wp-content/uploads/2024/07/types-of-house-designs-in-kenya.webp?fit=1280%2C853&ssl=1",
+      "rental_type": {
+        "name": "year",
+        "id": 1
+      },
+      "floors": 2,
+      "other_services": {
+        "name": "glass wall",
+        "id": 4
+      },
+      "id": 2
+    },
+    {
+      "type": "Room",
+      "id": 3,
+      "area": 50,
+      "rental_cost": 500,
+      "max_people": 4,
+      "rental_type": {
+        "name": "day",
+        "id": 3
+      },
+      "free_services": {
+        "name": "WIFI",
+        "id": 2
+      },
+      "img_url": "https://www.thespruce.com/thmb/WQdt9HXB78tKg5U5eITP4ZUlYcA=/2500x0/filters:no_upscale():max_bytes(150000):strip_icc()/PAinteriors-7-cafe9c2bd6be4823b9345e591e4f367f.jpg"
+    },
+    {
+      "type": "Room",
+      "id": 4,
+      "area": 50,
+      "rental_cost": 500,
+      "max_people": 4,
+      "rental_type": {
+        "name": "day",
+        "id": 3
+      },
+      "free_services": {
+        "name": "WIFI",
+        "id": 2
+      },
+      "img_url": "https://www.thespruce.com/thmb/WQdt9HXB78tKg5U5eITP4ZUlYcA=/2500x0/filters:no_upscale():max_bytes(150000):strip_icc()/PAinteriors-7-cafe9c2bd6be4823b9345e591e4f367f.jpg"
+    },
+    {
+      "type": "Room",
+      "id": 5,
+      "area": 50,
+      "rental_cost": 500,
+      "max_people": 4,
+      "rental_type": {
+        "name": "day",
+        "id": 3
+      },
+      "free_services": {
+        "name": "WIFI",
+        "id": 2
+      },
+      "img_url": "https://www.thespruce.com/thmb/WQdt9HXB78tKg5U5eITP4ZUlYcA=/2500x0/filters:no_upscale():max_bytes(150000):strip_icc()/PAinteriors-7-cafe9c2bd6be4823b9345e591e4f367f.jpg"
+    },
+    {
+      "type": "villa",
+      "area": 200,
+      "rental_cost": 5000,
+      "max_people": 40,
+      "room_standard": "QUEEN",
+      "img_url": "https://s-real.vn/wp-content/uploads/2021/09/Villa-l%C3%A0-g%C3%AC.jpg",
+      "rental_type": "year",
+      "other_services": "massage",
+      "pool_area": 100,
+      "floors": 9,
+      "free_services": "",
+      "id": 6
+    },
+    {
+      "type": "room",
+      "area": 30,
+      "rental_cost": 100,
+      "max_people": 5,
+      "room_standard": "basic",
+      "img_url": "https://www.peninsula.com/en/-/media/pbk/rooms/deluxe-room-twin-bed.jpg?mw=905&hash=9515693D3D8455DE1F48031E23A9C6BA",
+      "rental_type": "day",
+      "other_services": "",
+      "pool_area": "",
+      "floors": "",
+      "free_services": "",
+      "id": 7
+    },
+    {
+      "type": "room",
+      "area": 30,
+      "rental_cost": 302,
+      "max_people": 2,
+      "room_standard": "basic",
+      "img_url": "https://www.peninsula.com/en/-/media/pbk/rooms/deluxe-room-twin-bed.jpg?mw=905&hash=9515693D3D8455DE1F48031E23A9C6BA",
+      "rental_type": "day",
+      "other_services": "",
+      "pool_area": "",
+      "floors": "",
+      "free_services": "",
+      "id": 8
+    },
+    {
+      "type": "room",
+      "area": 30,
+      "rental_cost": 302,
+      "max_people": 2,
+      "room_standard": "basic",
+      "img_url": "https://product.hstatic.net/1000405477/product/deluxe_room_001_e9cf9d71f0ea428ebf597874150a6c70.jpg",
+      "rental_type": "day",
+      "other_services": "",
+      "pool_area": "",
+      "floors": "",
+      "free_services": "",
+      "id": 9
+    },
+    {
+      "type": "room",
+      "area": 50,
+      "rental_cost": 20,
+      "max_people": 6,
+      "room_standard": "Deluxe",
+      "img_url": "https://www.peninsula.com/-/media/pbk/rooms/deluxe-room.jpg",
+      "rental_type": "day",
+      "other_services": "",
+      "pool_area": "",
+      "floors": "",
+      "free_services": "",
+      "id": 10
+    },
+    {
+      "type": "house",
+      "area": 100,
+      "rental_cost": 500,
+      "max_people": 20,
+      "room_standard": "Luxury ",
+      "img_url": "https://karahomes.vn/public/files/styles/medium/public/2022/12/homestay-villas-nt18-33-vinhomes-ocean-park_20221225032.jpg?itok=MLVYnAfU",
+      "rental_type": "year",
+      "other_services": "glass wall",
+      "pool_area": 20,
+      "floors": 3,
+      "free_services": "",
+      "id": 11
+    },
+    {
+      "type": "house",
+      "area": 100,
+      "rental_cost": 500,
+      "max_people": 20,
+      "room_standard": "Luxury ",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNuybKBuO1ZH2nZEVKbiA1i_0bYGYe_VF4wbE81nEgZbV0xsQ-2k_u-1WO2vwoAUuKFcU&usqp=CAU",
+      "rental_type": "year",
+      "other_services": "glass wall",
+      "pool_area": 20,
+      "floors": 2,
+      "free_services": "",
+      "id": 12
+    },
+    {
+      "type": "house",
+      "area": 100,
+      "rental_cost": 500,
+      "max_people": 20,
+      "room_standard": "Luxury ",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNuybKBuO1ZH2nZEVKbiA1i_0bYGYe_VF4wbE81nEgZbV0xsQ-2k_u-1WO2vwoAUuKFcU&usqp=CAU",
+      "rental_type": "year",
+      "other_services": "glass wall",
+      "pool_area": 20,
+      "floors": 2,
+      "free_services": "",
+      "id": 13
+    },
+    {
+      "type": "house",
+      "area": 100,
+      "rental_cost": 500,
+      "max_people": 20,
+      "room_standard": "Luxury ",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqnyrPEMtpFAYCxPqRlRHShuA__0hHbv4DA&s",
+      "rental_type": "year",
+      "other_services": "glass wall",
+      "pool_area": 20,
+      "floors": 2,
+      "free_services": "",
+      "id": 14
+    },
+    {
+      "type": "house",
+      "area": 100,
+      "rental_cost": 500,
+      "max_people": 20,
+      "room_standard": "Luxury ",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqnyrPEMtpFAYCxPqRlRHShuA__0hHbv4DA&s",
+      "rental_type": "year",
+      "other_services": "glass wall",
+      "pool_area": 20,
+      "floors": 2,
+      "free_services": "",
+      "id": 15
+    }
+  ],
+  "free_services": [
+    {
+      "name": "breakfast",
+      "id": 1
+    },
+    {
+      "name": "WIFI",
+      "id": 2
+    }
+  ],
+  "rental_type": [
+    {
+      "name": "year",
+      "id": 1
+    },
+    {
+      "name": "month",
+      "id": 2
+    },
+    {
+      "name": "day",
+      "id": 3
+    },
+    {
+      "name": "hours",
+      "id": 4
+    }
+  ],
+  "other_services": [
+    {
+      "name": "private pool",
+      "id": 1
+    },
+    {
+      "name": "garden bbq",
+      "id": 2
+    },
+    {
+      "name": "garden",
+      "id": 3
+    },
+    {
+      "name": "glass wall",
+      "id": 4
+    }
+  ],
+  "additional_services": [
+    {
+      "name": "Massage",
+      "id": 1,
+      "unit": "session",
+      "price": 100
+    },
+    {
+      "name": "Karaoke",
+      "id": 2,
+      "unit": "hour",
+      "price": 30
+    },
+    {
+      "name": "Food",
+      "id": 3,
+      "unit": "dish",
+      "price": 200
+    },
+    {
+      "name": "Drink",
+      "id": 4,
+      "unit": "glass",
+      "price": 20
+    },
+    {
+      "name": "Vehicle rental",
+      "id": 5,
+      "unit": "hour",
+      "price": 50
+    }
+  ]
+}

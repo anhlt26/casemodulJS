@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import axios from "axios";
 
 function AddFacilities() {
   // Khai báo useFormik
@@ -11,8 +12,13 @@ function AddFacilities() {
       max_people: "",
       room_standard: "",
       img_url: "",
+      rental_type: "",
+      other_services:"",  // không required
+      pool_area:"",       // không required
+      floors:"",          // không required
+      free_services:""    // không required
     },
-    // Validation cơ bản
+
     validate: (values) => {
       const errors = {};
       if (!values.type) {
@@ -36,7 +42,15 @@ function AddFacilities() {
       return errors;
     },
     onSubmit: (values) => {
-      // Xử lý khi submit form
+      // xử lý post vào API ở đây nhé:
+      axios
+        .post("http://localhost:8080/facilities",values)
+        .then((Response) => {
+          console.log("---SENTTTT---", Response.data);
+        })
+        .catch((error)=> {
+          console.log("---loi nay: ",error)
+        })
       console.log("Form values:", values);
     },
   });
@@ -46,23 +60,25 @@ function AddFacilities() {
       <h2 className="mb-4">Add a New Facility</h2>
       <form onSubmit={formik.handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="type" className="form-label">
-            Type
+          <label htmlFor="rental_type" className="form-label">
+            Rental Type
           </label>
-          <input
-            type="text"
-            id="type"
+          <select
             name="type"
             className="form-control"
             value={formik.values.type}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-          />
+          >
+            <option value="">Select Type</option>
+            <option value="villa">Villa</option>
+            <option value="house">House</option>
+            <option value="room">Room</option>
+          </select>
           {formik.touched.type && formik.errors.type ? (
             <div className="text-danger">{formik.errors.type}</div>
           ) : null}
         </div>
-
         <div className="mb-3">
           <label htmlFor="area" className="form-label">
             Area (m²)
@@ -118,6 +134,28 @@ function AddFacilities() {
         </div>
 
         <div className="mb-3">
+          <label htmlFor="rental_type" className="form-label">
+            Rental Type
+          </label>
+          <select
+            id="rental_type"
+            name="rental_type"
+            className="form-control"
+            value={formik.values.rental_type}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          >
+            <option value="">Select rental type</option>
+            <option value="day">Day</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+          </select>
+          {formik.touched.rental_type && formik.errors.rental_type ? (
+            <div className="text-danger">{formik.errors.rental_type}</div>
+          ) : null}
+        </div>
+
+        <div className="mb-3">
           <label htmlFor="room_standard" className="form-label">
             Room Standard
           </label>
@@ -132,6 +170,60 @@ function AddFacilities() {
           />
           {formik.touched.room_standard && formik.errors.room_standard ? (
             <div className="text-danger">{formik.errors.room_standard}</div>
+          ) : null}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="other_services" className="form-label">
+            Other Services
+          </label>
+          <input
+            type="text"
+            id="other_services"
+            name="other_services"
+            className="form-control"
+            value={formik.values.other_services}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.other_services && formik.errors.other_services ? (
+            <div className="text-danger">{formik.errors.other_services}</div>
+          ) : null}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="pool_area" className="form-label">
+            Pool Area (m²)
+          </label>
+          <input
+            type="number"
+            id="pool_area"
+            name="pool_area"
+            className="form-control"
+            value={formik.values.pool_area}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.pool_area && formik.errors.pool_area ? (
+            <div className="text-danger">{formik.errors.pool_area}</div>
+          ) : null}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="floors" className="form-label">
+            Floors
+          </label>
+          <input
+            type="number"
+            id="floors"
+            name="floors"
+            className="form-control"
+            value={formik.values.floors}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.floors && formik.errors.floors ? (
+            <div className="text-danger">{formik.errors.floors}</div>
           ) : null}
         </div>
 

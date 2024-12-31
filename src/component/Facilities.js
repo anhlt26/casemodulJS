@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from "react";
-import data from "./db.json"; // Import file JSON trực tiếp
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Facilities = () => {
     const [facilities, setFacilities] = useState([]);
 
     useEffect(() => {
-        // Lấy dữ liệu từ file JSON
-        setFacilities(data.facilities);
+        const fetchFacilities = async () => {
+            try {
+                const respone = await axios.get("http://localhost:8080/facilities");
+                console.log(respone.data);
+                setFacilities(respone.data);
+            } catch (error) {
+                console.error("----error get data---", error);
+            }
+        }
+        fetchFacilities()
     }, []);
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:8080/facilities/${id}`);
+            setFacilities(facilities.filter((facility) => facility.id !== id));
+        } catch (error) {
+            console.error("--Error roi---", error);
+        }
+    }
 
     return (
         <div className="container mt-4 ">
@@ -28,12 +44,12 @@ const Facilities = () => {
                                 <p className="card-text">
                                     <strong>Diện Tích:</strong> {facility.area} m² <br />
                                     <strong>Giá thuê:</strong> {facility.rental_cost} USD <br />
-                                    <strong>Loại phòng:</strong> {facility.room_standard ? facility.room_standard.name : "N/A"} <br />
+                                    <strong>Loại phòng:</strong> {facility.room_standard ? facility.room_standard : "N/A"} <br />
                                     <strong>Max People:</strong> {facility.max_people} <br />
-                                    <button type="button" class="btn btn-primary"><Link to={`/facilities/${facility.id}`}>
+                                    <Link to={`/facilities/${facility.id}`} className="btn btn-primary">
                                         Detail
-                                    </Link></button>
-                                    <button type="button" class="btn btn-warning">Delete</button>
+                                    </Link>
+                                    <button type="button" className="btn btn-warning" onClick={() => handleDelete(facility.id)}>Delete</button>
                                 </p>
                             </div>
                         </div>

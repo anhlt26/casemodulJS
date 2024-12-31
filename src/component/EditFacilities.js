@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { fetchFacilityById,updateFacilityById } from "../Function/typeFacilities";
 
 const EditFacilities = () => {
   const { id } = useParams(); // Lấy id từ URL
-  const navigate = useNavigate(); // Thay vì history.push, sử dụng navigate
+  const navigate = useNavigate(); // Dùng navigate thay vì history.push
   const [facility, setFacility] = useState(null);
 
   // Tải dữ liệu facility từ API
   useEffect(() => {
     const fetchFacility = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/facilities/${id}`);
-        setFacility(response.data);
-      } catch (error) {
-        console.error("Lỗi khi tải facility:", error);
-      }
+      const data = await fetchFacilityById(id);
+      setFacility(data);
     };
     fetchFacility();
   }, [id]);
@@ -60,14 +56,8 @@ const EditFacilities = () => {
       return errors;
     },
     onSubmit: async (values) => {
-      try {
-        // Gửi yêu cầu PUT đến API để cập nhật thông tin
-        await axios.put(`http://localhost:8080/facilities/${id}`, values);
-        // Chuyển hướng về trang chi tiết facility sau khi cập nhật thành công
-        navigate(`/facilities/${id}`);
-      } catch (error) {
-        console.error("Lỗi khi cập nhật facility:", error);
-      }
+      await updateFacilityById(id, values);
+      navigate(`/facilities/${id}`);
     },
   });
 

@@ -177,34 +177,6 @@
       "floors": 2,
       "free_services": "",
       "id": 13
-    },
-    {
-      "type": "house",
-      "area": 100,
-      "rental_cost": 500,
-      "max_people": 20,
-      "room_standard": "Luxury ",
-      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqnyrPEMtpFAYCxPqRlRHShuA__0hHbv4DA&s",
-      "rental_type": "year",
-      "other_services": "glass wall",
-      "pool_area": 20,
-      "floors": 2,
-      "free_services": "",
-      "id": 14
-    },
-    {
-      "type": "house",
-      "area": 100,
-      "rental_cost": 500,
-      "max_people": 20,
-      "room_standard": "Luxury ",
-      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqnyrPEMtpFAYCxPqRlRHShuA__0hHbv4DA&s",
-      "rental_type": "year",
-      "other_services": "glass wall",
-      "pool_area": 20,
-      "floors": 2,
-      "free_services": "",
-      "id": 15
     }
   ],
   "free_services": [
